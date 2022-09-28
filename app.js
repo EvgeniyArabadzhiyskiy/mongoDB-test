@@ -12,6 +12,9 @@ app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
 
+app.get("/", async (req, res) => {
+  res.send("<h1>Привет меня зовут Евгений</h1>");
+});
 app.use("/api/contacts", contactsRouter);
 
 app.use((req, res) => {
